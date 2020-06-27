@@ -15,13 +15,15 @@ public class Main {
     private static void infinityRecord(){
         int longest = 0;
 
+        long start = System.currentTimeMillis();
+
         for (int i = 1; true; i++) {
 
             var steps = steps(BigInteger.valueOf(i));
 
             if(steps > longest) {
                 longest = steps;
-                System.out.println("New record " + i + ": " + steps);
+                System.out.println("New record " + i + ": " + steps + " in " +((System.currentTimeMillis() - start) / 1000f) + "seconds");
             }
 
             //  System.out.println(i);
