@@ -5,11 +5,30 @@ import java.math.BigInteger;
 public class Main {
 
     public static void main(String[] args) {
-        record();
+        infinityRecord();
     }
 
     private static void checkSpecificNumber(BigInteger i){
         System.out.println(i +": " + steps(i));
+    }
+
+    private static void infinityRecord(){
+        int longest = 0;
+
+        for (int i = 1; true; i++) {
+
+            var steps = steps(BigInteger.valueOf(i));
+
+            if(steps > longest) {
+                longest = i;
+                System.out.println("New record " + longest + ": " + steps);
+            }
+
+            //  System.out.println(i);
+
+        }
+
+
     }
 
     private static void record(){
