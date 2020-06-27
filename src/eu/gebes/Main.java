@@ -20,8 +20,8 @@ public class Main {
             var steps = steps(BigInteger.valueOf(i));
 
             if(steps > longest) {
-                longest = i;
-                System.out.println("New record " + longest + ": " + steps);
+                longest = steps;
+                System.out.println("New record " + i + ": " + steps);
             }
 
             //  System.out.println(i);
