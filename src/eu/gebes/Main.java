@@ -21,7 +21,7 @@ public class Main {
             if(steps(BigInteger.valueOf(i)) > longest)
                 longest = i;
 
-            System.out.println(i);
+          //  System.out.println(i);
 
         }
 
